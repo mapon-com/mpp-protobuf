@@ -22,5 +22,6 @@
             "Mpp\\": "Mpp/",
             "GPBMetadata\\": "GPBMetadata/"
         }
-    }
+    },
+    "version": "v1.0"
 }
