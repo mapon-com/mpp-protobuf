@@ -1,7 +1,11 @@
 {
     "name": "mapon-com/mpp-protobuf",
     "description": "PHP Protobuf Gen3 protocol",
-    "keywords": ["PHP","Protobuf","Gen3"],
+    "keywords": [
+        "PHP",
+        "Protobuf",
+        "Gen3"
+    ],
     "homepage": "https://mapon.com",
     "type": "library",
     "license": "LGPL",
@@ -19,5 +23,4 @@
             "GPBMetadata\\": "GPBMetadata/"
         }
     },
-    "version": "1.0"
 }
