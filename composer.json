@@ -1,0 +1,23 @@
+{
+    "name": "mapon-com/mpp-protobuf",
+    "description": "PHP Protobuf Gen3 protocol",
+    "keywords": ["PHP","Protobuf","Gen3"],
+    "homepage": "https://mapon.com",
+    "type": "library",
+    "license": "LGPL",
+    "authors": [
+        {
+            "name": "Miķelis Jankovskis"
+        }
+    ],
+    "require": {
+        "google/protobuf": "^3.15"
+    },
+    "autoload": {
+        "psr-0": {
+            "Mpp\\": "Mpp/",
+            "GPBMetadata\\": "GPBMetadata/"
+        }
+    },
+    "version": "1.0"
+}
