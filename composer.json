@@ -1,5 +1,5 @@
 {
-    "name": "mapon-com/mpp-protobuf",
+    "name": "mapon/mpp-protobuf",
     "description": "PHP Protobuf Gen3 protocol",
     "keywords": [
         "PHP",
@@ -23,5 +23,5 @@
             "GPBMetadata\\": "GPBMetadata/"
         }
     },
-    "version": "v1.0"
+    "version": "v1.1"
 }
