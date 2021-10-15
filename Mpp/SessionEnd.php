@@ -9,8 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- **
- *Session end message.
+ * session end message
  *
  * Generated from protobuf message <code>mpp.SessionEnd</code>
  */

@@ -9,8 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- **
- *Symbol invalidation message.
+ * symbol invalidation message
  *
  * Generated from protobuf message <code>mpp.SymbolInval</code>
  */

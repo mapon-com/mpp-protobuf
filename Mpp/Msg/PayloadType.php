@@ -34,17 +34,37 @@ class PayloadType
      */
     const SYMBOL_INVAL = 4;
     /**
-     * Generated from protobuf enum <code>RT_SAMPLING_START = 5;</code>
+     * Generated from protobuf enum <code>UPDATE_START = 5;</code>
      */
-    const RT_SAMPLING_START = 5;
+    const UPDATE_START = 5;
     /**
-     * Generated from protobuf enum <code>RT_SAMPLING_STOP = 6;</code>
+     * Generated from protobuf enum <code>UPDATE_START_RESULT = 6;</code>
      */
-    const RT_SAMPLING_STOP = 6;
+    const UPDATE_START_RESULT = 6;
     /**
-     * Generated from protobuf enum <code>MARK_ORIENTATION = 7;</code>
+     * Generated from protobuf enum <code>UPDATE_CANCEL = 7;</code>
      */
-    const MARK_ORIENTATION = 7;
+    const UPDATE_CANCEL = 7;
+    /**
+     * Generated from protobuf enum <code>UPDATE_CANCEL_RESULT = 8;</code>
+     */
+    const UPDATE_CANCEL_RESULT = 8;
+    /**
+     * Generated from protobuf enum <code>UPDATE_SESSION_RESULT = 9;</code>
+     */
+    const UPDATE_SESSION_RESULT = 9;
+    /**
+     * Generated from protobuf enum <code>RT_SAMPLING_START = 10;</code>
+     */
+    const RT_SAMPLING_START = 10;
+    /**
+     * Generated from protobuf enum <code>RT_SAMPLING_STOP = 11;</code>
+     */
+    const RT_SAMPLING_STOP = 11;
+    /**
+     * Generated from protobuf enum <code>MARK_ORIENTATION = 12;</code>
+     */
+    const MARK_ORIENTATION = 12;
 
     private static $valueToName = [
         self::NONE => 'NONE',
@@ -52,6 +72,11 @@ class PayloadType
         self::SESSION_END => 'SESSION_END',
         self::SAMPLES => 'SAMPLES',
         self::SYMBOL_INVAL => 'SYMBOL_INVAL',
+        self::UPDATE_START => 'UPDATE_START',
+        self::UPDATE_START_RESULT => 'UPDATE_START_RESULT',
+        self::UPDATE_CANCEL => 'UPDATE_CANCEL',
+        self::UPDATE_CANCEL_RESULT => 'UPDATE_CANCEL_RESULT',
+        self::UPDATE_SESSION_RESULT => 'UPDATE_SESSION_RESULT',
         self::RT_SAMPLING_START => 'RT_SAMPLING_START',
         self::RT_SAMPLING_STOP => 'RT_SAMPLING_STOP',
         self::MARK_ORIENTATION => 'MARK_ORIENTATION',

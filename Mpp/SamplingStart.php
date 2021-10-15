@@ -36,13 +36,13 @@ class SamplingStart extends \Google\Protobuf\Internal\Message
      */
     protected $allow_partial_samples = false;
     /**
-     * Generated from protobuf field <code>uint32 num_buffered_samples = 5;</code>
+     * Generated from protobuf field <code>uint32 sample_buf_size = 5;</code>
      */
-    protected $num_buffered_samples = 0;
+    protected $sample_buf_size = 0;
     /**
-     * Generated from protobuf field <code>uint32 num_transmitted_samples = 6;</code>
+     * Generated from protobuf field <code>uint32 sample_set_size = 6;</code>
      */
-    protected $num_transmitted_samples = 0;
+    protected $sample_set_size = 0;
 
     /**
      * Constructor.
@@ -56,8 +56,8 @@ class SamplingStart extends \Google\Protobuf\Internal\Message
      *           symbol IDs
      *     @type int|string $sampling_period
      *     @type bool $allow_partial_samples
-     *     @type int $num_buffered_samples
-     *     @type int $num_transmitted_samples
+     *     @type int $sample_buf_size
+     *     @type int $sample_set_size
      * }
      */
     public function __construct($data = NULL) {
@@ -162,45 +162,45 @@ class SamplingStart extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 num_buffered_samples = 5;</code>
+     * Generated from protobuf field <code>uint32 sample_buf_size = 5;</code>
      * @return int
      */
-    public function getNumBufferedSamples()
+    public function getSampleBufSize()
     {
-        return $this->num_buffered_samples;
+        return $this->sample_buf_size;
     }
 
     /**
-     * Generated from protobuf field <code>uint32 num_buffered_samples = 5;</code>
+     * Generated from protobuf field <code>uint32 sample_buf_size = 5;</code>
      * @param int $var
      * @return $this
      */
-    public function setNumBufferedSamples($var)
+    public function setSampleBufSize($var)
     {
         GPBUtil::checkUint32($var);
-        $this->num_buffered_samples = $var;
+        $this->sample_buf_size = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>uint32 num_transmitted_samples = 6;</code>
+     * Generated from protobuf field <code>uint32 sample_set_size = 6;</code>
      * @return int
      */
-    public function getNumTransmittedSamples()
+    public function getSampleSetSize()
     {
-        return $this->num_transmitted_samples;
+        return $this->sample_set_size;
     }
 
     /**
-     * Generated from protobuf field <code>uint32 num_transmitted_samples = 6;</code>
+     * Generated from protobuf field <code>uint32 sample_set_size = 6;</code>
      * @param int $var
      * @return $this
      */
-    public function setNumTransmittedSamples($var)
+    public function setSampleSetSize($var)
     {
         GPBUtil::checkUint32($var);
-        $this->num_transmitted_samples = $var;
+        $this->sample_set_size = $var;
 
         return $this;
     }

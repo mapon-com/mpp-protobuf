@@ -9,8 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- **
- *Data sample message.
+ * data sample message
  *
  * Generated from protobuf message <code>mpp.Samples</code>
  */
