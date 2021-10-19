@@ -7,49 +7,69 @@ namespace Mpp\Msg;
 use UnexpectedValueException;
 
 /**
- * payload types
+ * message types
  *
- * Protobuf type <code>mpp.Msg.PayloadType</code>
+ * Protobuf type <code>mpp.Msg.MsgType</code>
  */
-class PayloadType
+class MsgType
 {
     /**
+     * no payload
+     *
      * Generated from protobuf enum <code>NONE = 0;</code>
      */
     const NONE = 0;
     /**
+     * payload = SessionBegin
+     *
      * Generated from protobuf enum <code>SESSION_BEGIN = 1;</code>
      */
     const SESSION_BEGIN = 1;
     /**
+     * payload = SessionEnd
+     *
      * Generated from protobuf enum <code>SESSION_END = 2;</code>
      */
     const SESSION_END = 2;
     /**
+     * payload = Samples
+     *
      * Generated from protobuf enum <code>SAMPLES = 3;</code>
      */
     const SAMPLES = 3;
     /**
+     * payload = SymbolInval
+     *
      * Generated from protobuf enum <code>SYMBOL_INVAL = 4;</code>
      */
     const SYMBOL_INVAL = 4;
     /**
+     * payload = UpdateStart
+     *
      * Generated from protobuf enum <code>UPDATE_START = 5;</code>
      */
     const UPDATE_START = 5;
     /**
+     * payload = UpdateResult
+     *
      * Generated from protobuf enum <code>UPDATE_START_RESULT = 6;</code>
      */
     const UPDATE_START_RESULT = 6;
     /**
+     * payload = UpdateCancel
+     *
      * Generated from protobuf enum <code>UPDATE_CANCEL = 7;</code>
      */
     const UPDATE_CANCEL = 7;
     /**
+     * payload = UpdateResult
+     *
      * Generated from protobuf enum <code>UPDATE_CANCEL_RESULT = 8;</code>
      */
     const UPDATE_CANCEL_RESULT = 8;
     /**
+     * payload = UpdateResult
+     *
      * Generated from protobuf enum <code>UPDATE_SESSION_RESULT = 9;</code>
      */
     const UPDATE_SESSION_RESULT = 9;
@@ -104,5 +124,5 @@ class PayloadType
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PayloadType::class, \Mpp\Msg_PayloadType::class);
+class_alias(MsgType::class, \Mpp\Msg_MsgType::class);
 

@@ -17,11 +17,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class Msg extends \Google\Protobuf\Internal\Message
 {
     /**
-     * payload type
+     * message type
      *
-     * Generated from protobuf field <code>.mpp.Msg.PayloadType payload_type = 1;</code>
+     * Generated from protobuf field <code>.mpp.Msg.MsgType msg_type = 1;</code>
      */
-    protected $payload_type = 0;
+    protected $msg_type = 0;
     protected $payload;
 
     /**
@@ -30,8 +30,8 @@ class Msg extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $payload_type
-     *           payload type
+     *     @type int $msg_type
+     *           message type
      *     @type \Mpp\SessionBegin $session_begin
      *     @type \Mpp\SessionEnd $session_end
      *     @type \Mpp\Samples $samples
@@ -50,27 +50,27 @@ class Msg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * payload type
+     * message type
      *
-     * Generated from protobuf field <code>.mpp.Msg.PayloadType payload_type = 1;</code>
+     * Generated from protobuf field <code>.mpp.Msg.MsgType msg_type = 1;</code>
      * @return int
      */
-    public function getPayloadType()
+    public function getMsgType()
     {
-        return $this->payload_type;
+        return $this->msg_type;
     }
 
     /**
-     * payload type
+     * message type
      *
-     * Generated from protobuf field <code>.mpp.Msg.PayloadType payload_type = 1;</code>
+     * Generated from protobuf field <code>.mpp.Msg.MsgType msg_type = 1;</code>
      * @param int $var
      * @return $this
      */
-    public function setPayloadType($var)
+    public function setMsgType($var)
     {
-        GPBUtil::checkEnum($var, \Mpp\Msg\PayloadType::class);
-        $this->payload_type = $var;
+        GPBUtil::checkEnum($var, \Mpp\Msg\MsgType::class);
+        $this->msg_type = $var;
 
         return $this;
     }
