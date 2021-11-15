@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class UpdateCancel extends \Google\Protobuf\Internal\Message
 {
     /**
-     * update session ID
+     * update session ID to cancel (cancels any session if not set)
      *
      * Generated from protobuf field <code>uint32 session_id = 1;</code>
      */
@@ -29,7 +29,7 @@ class UpdateCancel extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $session_id
-     *           update session ID
+     *           update session ID to cancel (cancels any session if not set)
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class UpdateCancel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * update session ID
+     * update session ID to cancel (cancels any session if not set)
      *
      * Generated from protobuf field <code>uint32 session_id = 1;</code>
      * @return int
@@ -49,7 +49,7 @@ class UpdateCancel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * update session ID
+     * update session ID to cancel (cancels any session if not set)
      *
      * Generated from protobuf field <code>uint32 session_id = 1;</code>
      * @param int $var

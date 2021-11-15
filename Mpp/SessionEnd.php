@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * session end message
+ * session end message: issued by all MPP nodes before closing a comms channel
  *
  * Generated from protobuf message <code>mpp.SessionEnd</code>
  */

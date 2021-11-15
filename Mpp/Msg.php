@@ -39,6 +39,11 @@ class Msg extends \Google\Protobuf\Internal\Message
      *     @type \Mpp\UpdateStart $update_start
      *     @type \Mpp\UpdateCancel $update_cancel
      *     @type \Mpp\UpdateResult $update_result
+     *     @type \Mpp\LogReadStart $log_read_start
+     *     @type \Mpp\LogReadCancel $log_read_cancel
+     *     @type \Mpp\LogErase $log_erase
+     *     @type \Mpp\LogResult $log_result
+     *     @type \Mpp\LogEntry $log_entry
      *     @type \Mpp\SamplingStart $sampling_start
      *     @type \Mpp\SamplingStop $sampling_stop
      *     @type \Mpp\MarkOrientation $mark_orientation
@@ -265,82 +270,217 @@ class Msg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.mpp.SamplingStart sampling_start = 9;</code>
-     * @return \Mpp\SamplingStart|null
+     * Generated from protobuf field <code>.mpp.LogReadStart log_read_start = 9;</code>
+     * @return \Mpp\LogReadStart|null
      */
-    public function getSamplingStart()
+    public function getLogReadStart()
     {
         return $this->readOneof(9);
     }
 
-    public function hasSamplingStart()
+    public function hasLogReadStart()
     {
         return $this->hasOneof(9);
     }
 
     /**
-     * Generated from protobuf field <code>.mpp.SamplingStart sampling_start = 9;</code>
-     * @param \Mpp\SamplingStart $var
+     * Generated from protobuf field <code>.mpp.LogReadStart log_read_start = 9;</code>
+     * @param \Mpp\LogReadStart $var
      * @return $this
      */
-    public function setSamplingStart($var)
+    public function setLogReadStart($var)
     {
-        GPBUtil::checkMessage($var, \Mpp\SamplingStart::class);
+        GPBUtil::checkMessage($var, \Mpp\LogReadStart::class);
         $this->writeOneof(9, $var);
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>.mpp.SamplingStop sampling_stop = 10;</code>
-     * @return \Mpp\SamplingStop|null
+     * Generated from protobuf field <code>.mpp.LogReadCancel log_read_cancel = 10;</code>
+     * @return \Mpp\LogReadCancel|null
      */
-    public function getSamplingStop()
+    public function getLogReadCancel()
     {
         return $this->readOneof(10);
     }
 
-    public function hasSamplingStop()
+    public function hasLogReadCancel()
     {
         return $this->hasOneof(10);
     }
 
     /**
-     * Generated from protobuf field <code>.mpp.SamplingStop sampling_stop = 10;</code>
-     * @param \Mpp\SamplingStop $var
+     * Generated from protobuf field <code>.mpp.LogReadCancel log_read_cancel = 10;</code>
+     * @param \Mpp\LogReadCancel $var
      * @return $this
      */
-    public function setSamplingStop($var)
+    public function setLogReadCancel($var)
     {
-        GPBUtil::checkMessage($var, \Mpp\SamplingStop::class);
+        GPBUtil::checkMessage($var, \Mpp\LogReadCancel::class);
         $this->writeOneof(10, $var);
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>.mpp.MarkOrientation mark_orientation = 11;</code>
-     * @return \Mpp\MarkOrientation|null
+     * Generated from protobuf field <code>.mpp.LogErase log_erase = 11;</code>
+     * @return \Mpp\LogErase|null
      */
-    public function getMarkOrientation()
+    public function getLogErase()
     {
         return $this->readOneof(11);
     }
 
-    public function hasMarkOrientation()
+    public function hasLogErase()
     {
         return $this->hasOneof(11);
     }
 
     /**
-     * Generated from protobuf field <code>.mpp.MarkOrientation mark_orientation = 11;</code>
+     * Generated from protobuf field <code>.mpp.LogErase log_erase = 11;</code>
+     * @param \Mpp\LogErase $var
+     * @return $this
+     */
+    public function setLogErase($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\LogErase::class);
+        $this->writeOneof(11, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.LogResult log_result = 12;</code>
+     * @return \Mpp\LogResult|null
+     */
+    public function getLogResult()
+    {
+        return $this->readOneof(12);
+    }
+
+    public function hasLogResult()
+    {
+        return $this->hasOneof(12);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.LogResult log_result = 12;</code>
+     * @param \Mpp\LogResult $var
+     * @return $this
+     */
+    public function setLogResult($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\LogResult::class);
+        $this->writeOneof(12, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.LogEntry log_entry = 13;</code>
+     * @return \Mpp\LogEntry|null
+     */
+    public function getLogEntry()
+    {
+        return $this->readOneof(13);
+    }
+
+    public function hasLogEntry()
+    {
+        return $this->hasOneof(13);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.LogEntry log_entry = 13;</code>
+     * @param \Mpp\LogEntry $var
+     * @return $this
+     */
+    public function setLogEntry($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\LogEntry::class);
+        $this->writeOneof(13, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.SamplingStart sampling_start = 14;</code>
+     * @return \Mpp\SamplingStart|null
+     */
+    public function getSamplingStart()
+    {
+        return $this->readOneof(14);
+    }
+
+    public function hasSamplingStart()
+    {
+        return $this->hasOneof(14);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.SamplingStart sampling_start = 14;</code>
+     * @param \Mpp\SamplingStart $var
+     * @return $this
+     */
+    public function setSamplingStart($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\SamplingStart::class);
+        $this->writeOneof(14, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.SamplingStop sampling_stop = 15;</code>
+     * @return \Mpp\SamplingStop|null
+     */
+    public function getSamplingStop()
+    {
+        return $this->readOneof(15);
+    }
+
+    public function hasSamplingStop()
+    {
+        return $this->hasOneof(15);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.SamplingStop sampling_stop = 15;</code>
+     * @param \Mpp\SamplingStop $var
+     * @return $this
+     */
+    public function setSamplingStop($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\SamplingStop::class);
+        $this->writeOneof(15, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.MarkOrientation mark_orientation = 16;</code>
+     * @return \Mpp\MarkOrientation|null
+     */
+    public function getMarkOrientation()
+    {
+        return $this->readOneof(16);
+    }
+
+    public function hasMarkOrientation()
+    {
+        return $this->hasOneof(16);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.MarkOrientation mark_orientation = 16;</code>
      * @param \Mpp\MarkOrientation $var
      * @return $this
      */
     public function setMarkOrientation($var)
     {
         GPBUtil::checkMessage($var, \Mpp\MarkOrientation::class);
-        $this->writeOneof(11, $var);
+        $this->writeOneof(16, $var);
 
         return $this;
     }

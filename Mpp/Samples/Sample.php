@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class Sample extends \Google\Protobuf\Internal\Message
 {
     /**
-     * UTC timestamp
+     * timestamp (UTC, Unix epoch, ms)
      *
      * Generated from protobuf field <code>uint64 utc_timestamp = 1;</code>
      */
@@ -35,7 +35,7 @@ class Sample extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $utc_timestamp
-     *           UTC timestamp
+     *           timestamp (UTC, Unix epoch, ms)
      *     @type string $symbol_values
      *           symbol values as continuous buffer
      * }
@@ -46,7 +46,7 @@ class Sample extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * UTC timestamp
+     * timestamp (UTC, Unix epoch, ms)
      *
      * Generated from protobuf field <code>uint64 utc_timestamp = 1;</code>
      * @return int|string
@@ -57,7 +57,7 @@ class Sample extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * UTC timestamp
+     * timestamp (UTC, Unix epoch, ms)
      *
      * Generated from protobuf field <code>uint64 utc_timestamp = 1;</code>
      * @param int|string $var

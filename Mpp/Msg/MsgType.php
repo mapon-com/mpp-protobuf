@@ -74,17 +74,59 @@ class MsgType
      */
     const UPDATE_SESSION_RESULT = 9;
     /**
-     * Generated from protobuf enum <code>RT_SAMPLING_START = 10;</code>
+     * payload = LogReadStart
+     *
+     * Generated from protobuf enum <code>LOG_READ_START = 10;</code>
      */
-    const RT_SAMPLING_START = 10;
+    const LOG_READ_START = 10;
     /**
-     * Generated from protobuf enum <code>RT_SAMPLING_STOP = 11;</code>
+     * payload = LogResult
+     *
+     * Generated from protobuf enum <code>LOG_READ_START_RESULT = 11;</code>
      */
-    const RT_SAMPLING_STOP = 11;
+    const LOG_READ_START_RESULT = 11;
     /**
-     * Generated from protobuf enum <code>MARK_ORIENTATION = 12;</code>
+     * payload = LogReadCancel
+     *
+     * Generated from protobuf enum <code>LOG_READ_CANCEL = 12;</code>
      */
-    const MARK_ORIENTATION = 12;
+    const LOG_READ_CANCEL = 12;
+    /**
+     * payload = LogResult
+     *
+     * Generated from protobuf enum <code>LOG_READ_CANCEL_RESULT = 13;</code>
+     */
+    const LOG_READ_CANCEL_RESULT = 13;
+    /**
+     * payload = LogErase
+     *
+     * Generated from protobuf enum <code>LOG_ERASE = 14;</code>
+     */
+    const LOG_ERASE = 14;
+    /**
+     * payload = LogResult
+     *
+     * Generated from protobuf enum <code>LOG_ERASE_RESULT = 15;</code>
+     */
+    const LOG_ERASE_RESULT = 15;
+    /**
+     * payload = LogEntry
+     *
+     * Generated from protobuf enum <code>LOG_ENTRY = 16;</code>
+     */
+    const LOG_ENTRY = 16;
+    /**
+     * Generated from protobuf enum <code>RT_SAMPLING_START = 17;</code>
+     */
+    const RT_SAMPLING_START = 17;
+    /**
+     * Generated from protobuf enum <code>RT_SAMPLING_STOP = 18;</code>
+     */
+    const RT_SAMPLING_STOP = 18;
+    /**
+     * Generated from protobuf enum <code>MARK_ORIENTATION = 19;</code>
+     */
+    const MARK_ORIENTATION = 19;
 
     private static $valueToName = [
         self::NONE => 'NONE',
@@ -97,6 +139,13 @@ class MsgType
         self::UPDATE_CANCEL => 'UPDATE_CANCEL',
         self::UPDATE_CANCEL_RESULT => 'UPDATE_CANCEL_RESULT',
         self::UPDATE_SESSION_RESULT => 'UPDATE_SESSION_RESULT',
+        self::LOG_READ_START => 'LOG_READ_START',
+        self::LOG_READ_START_RESULT => 'LOG_READ_START_RESULT',
+        self::LOG_READ_CANCEL => 'LOG_READ_CANCEL',
+        self::LOG_READ_CANCEL_RESULT => 'LOG_READ_CANCEL_RESULT',
+        self::LOG_ERASE => 'LOG_ERASE',
+        self::LOG_ERASE_RESULT => 'LOG_ERASE_RESULT',
+        self::LOG_ENTRY => 'LOG_ENTRY',
         self::RT_SAMPLING_START => 'RT_SAMPLING_START',
         self::RT_SAMPLING_STOP => 'RT_SAMPLING_STOP',
         self::MARK_ORIENTATION => 'MARK_ORIENTATION',
