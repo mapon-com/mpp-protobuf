@@ -11,9 +11,9 @@ use Google\Protobuf\Internal\GPBUtil;
 /**
  **
  *
- * Generated from protobuf message <code>mpp.MarkOrientation</code>
+ * Generated from protobuf message <code>mpp.MarkInstallOrientation</code>
  */
-class MarkOrientation extends \Google\Protobuf\Internal\Message
+class MarkInstallOrientation extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>float front_heading = 1;</code>

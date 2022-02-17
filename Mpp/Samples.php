@@ -16,17 +16,12 @@ use Google\Protobuf\Internal\GPBUtil;
 class Samples extends \Google\Protobuf\Internal\Message
 {
     /**
-     * sample tag hash
-     *
-     * Generated from protobuf field <code>uint32 tag_hash = 1;</code>
-     */
-    protected $tag_hash = 0;
-    /**
-     * sample blocks
+     * blocks of samples
      *
      * Generated from protobuf field <code>repeated .mpp.Samples.Block blocks = 2;</code>
      */
     private $blocks;
+    protected $tag;
 
     /**
      * Constructor.
@@ -36,8 +31,10 @@ class Samples extends \Google\Protobuf\Internal\Message
      *
      *     @type int $tag_hash
      *           sample tag hash
+     *     @type string $tag_str
+     *           sample tag string
      *     @type \Mpp\Samples\Block[]|\Google\Protobuf\Internal\RepeatedField $blocks
-     *           sample blocks
+     *           blocks of samples
      * }
      */
     public function __construct($data = NULL) {
@@ -53,7 +50,12 @@ class Samples extends \Google\Protobuf\Internal\Message
      */
     public function getTagHash()
     {
-        return $this->tag_hash;
+        return $this->readOneof(1);
+    }
+
+    public function hasTagHash()
+    {
+        return $this->hasOneof(1);
     }
 
     /**
@@ -66,13 +68,44 @@ class Samples extends \Google\Protobuf\Internal\Message
     public function setTagHash($var)
     {
         GPBUtil::checkUint32($var);
-        $this->tag_hash = $var;
+        $this->writeOneof(1, $var);
 
         return $this;
     }
 
     /**
-     * sample blocks
+     * sample tag string
+     *
+     * Generated from protobuf field <code>string tag_str = 3;</code>
+     * @return string
+     */
+    public function getTagStr()
+    {
+        return $this->readOneof(3);
+    }
+
+    public function hasTagStr()
+    {
+        return $this->hasOneof(3);
+    }
+
+    /**
+     * sample tag string
+     *
+     * Generated from protobuf field <code>string tag_str = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTagStr($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->writeOneof(3, $var);
+
+        return $this;
+    }
+
+    /**
+     * blocks of samples
      *
      * Generated from protobuf field <code>repeated .mpp.Samples.Block blocks = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -83,7 +116,7 @@ class Samples extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * sample blocks
+     * blocks of samples
      *
      * Generated from protobuf field <code>repeated .mpp.Samples.Block blocks = 2;</code>
      * @param \Mpp\Samples\Block[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -95,6 +128,14 @@ class Samples extends \Google\Protobuf\Internal\Message
         $this->blocks = $arr;
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTag()
+    {
+        return $this->whichOneof("tag");
     }
 
 }

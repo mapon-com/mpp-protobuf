@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class SessionBegin extends \Google\Protobuf\Internal\Message
 {
     /**
-     * node ID; identifies the node
+     * node ID; identifies the device
      *
      * Generated from protobuf field <code>uint64 node_id = 1;</code>
      */
@@ -29,7 +29,7 @@ class SessionBegin extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $node_id
-     *           node ID; identifies the node
+     *           node ID; identifies the device
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class SessionBegin extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * node ID; identifies the node
+     * node ID; identifies the device
      *
      * Generated from protobuf field <code>uint64 node_id = 1;</code>
      * @return int|string
@@ -49,7 +49,7 @@ class SessionBegin extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * node ID; identifies the node
+     * node ID; identifies the device
      *
      * Generated from protobuf field <code>uint64 node_id = 1;</code>
      * @param int|string $var

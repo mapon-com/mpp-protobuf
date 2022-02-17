@@ -124,9 +124,33 @@ class MsgType
      */
     const RT_SAMPLING_STOP = 18;
     /**
-     * Generated from protobuf enum <code>MARK_ORIENTATION = 19;</code>
+     * Generated from protobuf enum <code>MARK_INSTALL_ORIENTATION = 19;</code>
      */
-    const MARK_ORIENTATION = 19;
+    const MARK_INSTALL_ORIENTATION = 19;
+    /**
+     * Generated from protobuf enum <code>CALIBRATE_IMU = 20;</code>
+     */
+    const CALIBRATE_IMU = 20;
+    /**
+     * payload = SysInfoRequest
+     *
+     * Generated from protobuf enum <code>SYS_INFO_REQUEST = 21;</code>
+     */
+    const SYS_INFO_REQUEST = 21;
+    /**
+     * payload = SysInfo
+     *
+     * Generated from protobuf enum <code>SYS_INFO = 22;</code>
+     */
+    const SYS_INFO = 22;
+    /**
+     * Generated from protobuf enum <code>CONFIG_READ = 23;</code>
+     */
+    const CONFIG_READ = 23;
+    /**
+     * Generated from protobuf enum <code>CONFIG_READ_RESULT = 24;</code>
+     */
+    const CONFIG_READ_RESULT = 24;
 
     private static $valueToName = [
         self::NONE => 'NONE',
@@ -148,7 +172,12 @@ class MsgType
         self::LOG_ENTRY => 'LOG_ENTRY',
         self::RT_SAMPLING_START => 'RT_SAMPLING_START',
         self::RT_SAMPLING_STOP => 'RT_SAMPLING_STOP',
-        self::MARK_ORIENTATION => 'MARK_ORIENTATION',
+        self::MARK_INSTALL_ORIENTATION => 'MARK_INSTALL_ORIENTATION',
+        self::CALIBRATE_IMU => 'CALIBRATE_IMU',
+        self::SYS_INFO_REQUEST => 'SYS_INFO_REQUEST',
+        self::SYS_INFO => 'SYS_INFO',
+        self::CONFIG_READ => 'CONFIG_READ',
+        self::CONFIG_READ_RESULT => 'CONFIG_READ_RESULT',
     ];
 
     public static function name($value)

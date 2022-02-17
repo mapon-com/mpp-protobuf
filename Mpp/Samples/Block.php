@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * sample block with a common symbol list
+ * block of samples with a common symbol list
  *
  * Generated from protobuf message <code>mpp.Samples.Block</code>
  */

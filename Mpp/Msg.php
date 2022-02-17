@@ -46,7 +46,12 @@ class Msg extends \Google\Protobuf\Internal\Message
      *     @type \Mpp\LogEntry $log_entry
      *     @type \Mpp\SamplingStart $sampling_start
      *     @type \Mpp\SamplingStop $sampling_stop
-     *     @type \Mpp\MarkOrientation $mark_orientation
+     *     @type \Mpp\MarkInstallOrientation $mark_install_orientation
+     *     @type \Mpp\CalibrateIMU $calibrate_imu
+     *     @type \Mpp\SysInfoRequest $sys_info_request
+     *     @type \Mpp\SysInfo $sys_info
+     *     @type \Mpp\ConfigRead $config_read
+     *     @type \Mpp\ConfigReadResult $config_read_result
      * }
      */
     public function __construct($data = NULL) {
@@ -459,28 +464,163 @@ class Msg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.mpp.MarkOrientation mark_orientation = 16;</code>
-     * @return \Mpp\MarkOrientation|null
+     * Generated from protobuf field <code>.mpp.MarkInstallOrientation mark_install_orientation = 16;</code>
+     * @return \Mpp\MarkInstallOrientation|null
      */
-    public function getMarkOrientation()
+    public function getMarkInstallOrientation()
     {
         return $this->readOneof(16);
     }
 
-    public function hasMarkOrientation()
+    public function hasMarkInstallOrientation()
     {
         return $this->hasOneof(16);
     }
 
     /**
-     * Generated from protobuf field <code>.mpp.MarkOrientation mark_orientation = 16;</code>
-     * @param \Mpp\MarkOrientation $var
+     * Generated from protobuf field <code>.mpp.MarkInstallOrientation mark_install_orientation = 16;</code>
+     * @param \Mpp\MarkInstallOrientation $var
      * @return $this
      */
-    public function setMarkOrientation($var)
+    public function setMarkInstallOrientation($var)
     {
-        GPBUtil::checkMessage($var, \Mpp\MarkOrientation::class);
+        GPBUtil::checkMessage($var, \Mpp\MarkInstallOrientation::class);
         $this->writeOneof(16, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.CalibrateIMU calibrate_imu = 17;</code>
+     * @return \Mpp\CalibrateIMU|null
+     */
+    public function getCalibrateImu()
+    {
+        return $this->readOneof(17);
+    }
+
+    public function hasCalibrateImu()
+    {
+        return $this->hasOneof(17);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.CalibrateIMU calibrate_imu = 17;</code>
+     * @param \Mpp\CalibrateIMU $var
+     * @return $this
+     */
+    public function setCalibrateImu($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\CalibrateIMU::class);
+        $this->writeOneof(17, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.SysInfoRequest sys_info_request = 18;</code>
+     * @return \Mpp\SysInfoRequest|null
+     */
+    public function getSysInfoRequest()
+    {
+        return $this->readOneof(18);
+    }
+
+    public function hasSysInfoRequest()
+    {
+        return $this->hasOneof(18);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.SysInfoRequest sys_info_request = 18;</code>
+     * @param \Mpp\SysInfoRequest $var
+     * @return $this
+     */
+    public function setSysInfoRequest($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\SysInfoRequest::class);
+        $this->writeOneof(18, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.SysInfo sys_info = 19;</code>
+     * @return \Mpp\SysInfo|null
+     */
+    public function getSysInfo()
+    {
+        return $this->readOneof(19);
+    }
+
+    public function hasSysInfo()
+    {
+        return $this->hasOneof(19);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.SysInfo sys_info = 19;</code>
+     * @param \Mpp\SysInfo $var
+     * @return $this
+     */
+    public function setSysInfo($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\SysInfo::class);
+        $this->writeOneof(19, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.ConfigRead config_read = 20;</code>
+     * @return \Mpp\ConfigRead|null
+     */
+    public function getConfigRead()
+    {
+        return $this->readOneof(20);
+    }
+
+    public function hasConfigRead()
+    {
+        return $this->hasOneof(20);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.ConfigRead config_read = 20;</code>
+     * @param \Mpp\ConfigRead $var
+     * @return $this
+     */
+    public function setConfigRead($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\ConfigRead::class);
+        $this->writeOneof(20, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.ConfigReadResult config_read_result = 21;</code>
+     * @return \Mpp\ConfigReadResult|null
+     */
+    public function getConfigReadResult()
+    {
+        return $this->readOneof(21);
+    }
+
+    public function hasConfigReadResult()
+    {
+        return $this->hasOneof(21);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.ConfigReadResult config_read_result = 21;</code>
+     * @param \Mpp\ConfigReadResult $var
+     * @return $this
+     */
+    public function setConfigReadResult($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\ConfigReadResult::class);
+        $this->writeOneof(21, $var);
 
         return $this;
     }
