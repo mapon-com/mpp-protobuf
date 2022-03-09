@@ -22,7 +22,7 @@ class Sample extends \Google\Protobuf\Internal\Message
      */
     protected $utc_timestamp = 0;
     /**
-     * symbol values as continuous buffer
+     * symbol values as a continuous buffer
      *
      * Generated from protobuf field <code>bytes symbol_values = 2;</code>
      */
@@ -37,7 +37,7 @@ class Sample extends \Google\Protobuf\Internal\Message
      *     @type int|string $utc_timestamp
      *           timestamp (UTC, Unix epoch, ms)
      *     @type string $symbol_values
-     *           symbol values as continuous buffer
+     *           symbol values as a continuous buffer
      * }
      */
     public function __construct($data = NULL) {
@@ -72,7 +72,7 @@ class Sample extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * symbol values as continuous buffer
+     * symbol values as a continuous buffer
      *
      * Generated from protobuf field <code>bytes symbol_values = 2;</code>
      * @return string
@@ -83,7 +83,7 @@ class Sample extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * symbol values as continuous buffer
+     * symbol values as a continuous buffer
      *
      * Generated from protobuf field <code>bytes symbol_values = 2;</code>
      * @param string $var

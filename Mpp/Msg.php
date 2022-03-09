@@ -9,9 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- **
- *Top-level MPP message with variable payload.
- *
  * Generated from protobuf message <code>mpp.Msg</code>
  */
 class Msg extends \Google\Protobuf\Internal\Message
@@ -50,8 +47,13 @@ class Msg extends \Google\Protobuf\Internal\Message
      *     @type \Mpp\CalibrateIMU $calibrate_imu
      *     @type \Mpp\SysInfoRequest $sys_info_request
      *     @type \Mpp\SysInfo $sys_info
+     *     @type \Mpp\ConfigReadRequest $config_read_request
      *     @type \Mpp\ConfigRead $config_read
-     *     @type \Mpp\ConfigReadResult $config_read_result
+     *     @type \Mpp\ConfigWrite $config_write
+     *     @type \Mpp\ConfigSave $config_save
+     *     @type \Mpp\ConfigRevert $config_revert
+     *     @type \Mpp\ConfigErase $config_erase
+     *     @type \Mpp\ConfigResult $config_result
      * }
      */
     public function __construct($data = NULL) {
@@ -572,55 +574,190 @@ class Msg extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.mpp.ConfigRead config_read = 20;</code>
-     * @return \Mpp\ConfigRead|null
+     * Generated from protobuf field <code>.mpp.ConfigReadRequest config_read_request = 20;</code>
+     * @return \Mpp\ConfigReadRequest|null
      */
-    public function getConfigRead()
+    public function getConfigReadRequest()
     {
         return $this->readOneof(20);
     }
 
-    public function hasConfigRead()
+    public function hasConfigReadRequest()
     {
         return $this->hasOneof(20);
     }
 
     /**
-     * Generated from protobuf field <code>.mpp.ConfigRead config_read = 20;</code>
-     * @param \Mpp\ConfigRead $var
+     * Generated from protobuf field <code>.mpp.ConfigReadRequest config_read_request = 20;</code>
+     * @param \Mpp\ConfigReadRequest $var
      * @return $this
      */
-    public function setConfigRead($var)
+    public function setConfigReadRequest($var)
     {
-        GPBUtil::checkMessage($var, \Mpp\ConfigRead::class);
+        GPBUtil::checkMessage($var, \Mpp\ConfigReadRequest::class);
         $this->writeOneof(20, $var);
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>.mpp.ConfigReadResult config_read_result = 21;</code>
-     * @return \Mpp\ConfigReadResult|null
+     * Generated from protobuf field <code>.mpp.ConfigRead config_read = 21;</code>
+     * @return \Mpp\ConfigRead|null
      */
-    public function getConfigReadResult()
+    public function getConfigRead()
     {
         return $this->readOneof(21);
     }
 
-    public function hasConfigReadResult()
+    public function hasConfigRead()
     {
         return $this->hasOneof(21);
     }
 
     /**
-     * Generated from protobuf field <code>.mpp.ConfigReadResult config_read_result = 21;</code>
-     * @param \Mpp\ConfigReadResult $var
+     * Generated from protobuf field <code>.mpp.ConfigRead config_read = 21;</code>
+     * @param \Mpp\ConfigRead $var
      * @return $this
      */
-    public function setConfigReadResult($var)
+    public function setConfigRead($var)
     {
-        GPBUtil::checkMessage($var, \Mpp\ConfigReadResult::class);
+        GPBUtil::checkMessage($var, \Mpp\ConfigRead::class);
         $this->writeOneof(21, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.ConfigWrite config_write = 22;</code>
+     * @return \Mpp\ConfigWrite|null
+     */
+    public function getConfigWrite()
+    {
+        return $this->readOneof(22);
+    }
+
+    public function hasConfigWrite()
+    {
+        return $this->hasOneof(22);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.ConfigWrite config_write = 22;</code>
+     * @param \Mpp\ConfigWrite $var
+     * @return $this
+     */
+    public function setConfigWrite($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\ConfigWrite::class);
+        $this->writeOneof(22, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.ConfigSave config_save = 23;</code>
+     * @return \Mpp\ConfigSave|null
+     */
+    public function getConfigSave()
+    {
+        return $this->readOneof(23);
+    }
+
+    public function hasConfigSave()
+    {
+        return $this->hasOneof(23);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.ConfigSave config_save = 23;</code>
+     * @param \Mpp\ConfigSave $var
+     * @return $this
+     */
+    public function setConfigSave($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\ConfigSave::class);
+        $this->writeOneof(23, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.ConfigRevert config_revert = 24;</code>
+     * @return \Mpp\ConfigRevert|null
+     */
+    public function getConfigRevert()
+    {
+        return $this->readOneof(24);
+    }
+
+    public function hasConfigRevert()
+    {
+        return $this->hasOneof(24);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.ConfigRevert config_revert = 24;</code>
+     * @param \Mpp\ConfigRevert $var
+     * @return $this
+     */
+    public function setConfigRevert($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\ConfigRevert::class);
+        $this->writeOneof(24, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.ConfigErase config_erase = 25;</code>
+     * @return \Mpp\ConfigErase|null
+     */
+    public function getConfigErase()
+    {
+        return $this->readOneof(25);
+    }
+
+    public function hasConfigErase()
+    {
+        return $this->hasOneof(25);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.ConfigErase config_erase = 25;</code>
+     * @param \Mpp\ConfigErase $var
+     * @return $this
+     */
+    public function setConfigErase($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\ConfigErase::class);
+        $this->writeOneof(25, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.ConfigResult config_result = 26;</code>
+     * @return \Mpp\ConfigResult|null
+     */
+    public function getConfigResult()
+    {
+        return $this->readOneof(26);
+    }
+
+    public function hasConfigResult()
+    {
+        return $this->hasOneof(26);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.ConfigResult config_result = 26;</code>
+     * @param \Mpp\ConfigResult $var
+     * @return $this
+     */
+    public function setConfigResult($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\ConfigResult::class);
+        $this->writeOneof(26, $var);
 
         return $this;
     }

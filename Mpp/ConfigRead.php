@@ -9,10 +9,32 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ **
+ *	Purpose:	Contains the current configuration of a device.
+ *	Reply:		n/d
+ *
  * Generated from protobuf message <code>mpp.ConfigRead</code>
  */
 class ConfigRead extends \Google\Protobuf\Internal\Message
 {
+    /**
+     * initial (default) configuration
+     *
+     * Generated from protobuf field <code>.mpp.ConfigRead.Layer initial_config = 1;</code>
+     */
+    protected $initial_config = null;
+    /**
+     * user configuration; overwrites the defaults
+     *
+     * Generated from protobuf field <code>.mpp.ConfigRead.Layer user_config = 2;</code>
+     */
+    protected $user_config = null;
+    /**
+     * IDs of locked symbols
+     *
+     * Generated from protobuf field <code>repeated uint32 locked_symbol_ids = 3;</code>
+     */
+    private $locked_symbol_ids;
 
     /**
      * Constructor.
@@ -20,11 +42,115 @@ class ConfigRead extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type \Mpp\ConfigRead\Layer $initial_config
+     *           initial (default) configuration
+     *     @type \Mpp\ConfigRead\Layer $user_config
+     *           user configuration; overwrites the defaults
+     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $locked_symbol_ids
+     *           IDs of locked symbols
      * }
      */
     public function __construct($data = NULL) {
         \GPBMetadata\Mpp\Mpp::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     * initial (default) configuration
+     *
+     * Generated from protobuf field <code>.mpp.ConfigRead.Layer initial_config = 1;</code>
+     * @return \Mpp\ConfigRead\Layer|null
+     */
+    public function getInitialConfig()
+    {
+        return $this->initial_config;
+    }
+
+    public function hasInitialConfig()
+    {
+        return isset($this->initial_config);
+    }
+
+    public function clearInitialConfig()
+    {
+        unset($this->initial_config);
+    }
+
+    /**
+     * initial (default) configuration
+     *
+     * Generated from protobuf field <code>.mpp.ConfigRead.Layer initial_config = 1;</code>
+     * @param \Mpp\ConfigRead\Layer $var
+     * @return $this
+     */
+    public function setInitialConfig($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\ConfigRead\Layer::class);
+        $this->initial_config = $var;
+
+        return $this;
+    }
+
+    /**
+     * user configuration; overwrites the defaults
+     *
+     * Generated from protobuf field <code>.mpp.ConfigRead.Layer user_config = 2;</code>
+     * @return \Mpp\ConfigRead\Layer|null
+     */
+    public function getUserConfig()
+    {
+        return $this->user_config;
+    }
+
+    public function hasUserConfig()
+    {
+        return isset($this->user_config);
+    }
+
+    public function clearUserConfig()
+    {
+        unset($this->user_config);
+    }
+
+    /**
+     * user configuration; overwrites the defaults
+     *
+     * Generated from protobuf field <code>.mpp.ConfigRead.Layer user_config = 2;</code>
+     * @param \Mpp\ConfigRead\Layer $var
+     * @return $this
+     */
+    public function setUserConfig($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\ConfigRead\Layer::class);
+        $this->user_config = $var;
+
+        return $this;
+    }
+
+    /**
+     * IDs of locked symbols
+     *
+     * Generated from protobuf field <code>repeated uint32 locked_symbol_ids = 3;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getLockedSymbolIds()
+    {
+        return $this->locked_symbol_ids;
+    }
+
+    /**
+     * IDs of locked symbols
+     *
+     * Generated from protobuf field <code>repeated uint32 locked_symbol_ids = 3;</code>
+     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setLockedSymbolIds($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::UINT32);
+        $this->locked_symbol_ids = $arr;
+
+        return $this;
     }
 
 }

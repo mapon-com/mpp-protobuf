@@ -24,22 +24,22 @@ class SysInfo extends \Google\Protobuf\Internal\Message
     protected $system_id = 0;
     /**
      * hardware version in format
-     * v[major].[minor]
-     * e.g., v1.0
+     * [major].[minor]
+     * e.g., 1.0
      *
-     * Generated from protobuf field <code>uint32 hw_version_major = 2;</code>
+     * Generated from protobuf field <code>optional uint32 hw_version_major = 2;</code>
      */
-    protected $hw_version_major = 0;
+    protected $hw_version_major = null;
     /**
      * hardware version, minor
      *
-     * Generated from protobuf field <code>uint32 hw_version_minor = 3;</code>
+     * Generated from protobuf field <code>optional uint32 hw_version_minor = 3;</code>
      */
-    protected $hw_version_minor = 0;
+    protected $hw_version_minor = null;
     /**
      * firmware version in format 
-     * v[major].[minor].[patch]-[variant]
-     * e.g., v2.1.0-beta
+     * [major].[minor].[patch]-[variant]
+     * e.g., 2.1.0-beta
      *
      * Generated from protobuf field <code>uint32 fw_version_major = 4;</code>
      */
@@ -73,14 +73,14 @@ class SysInfo extends \Google\Protobuf\Internal\Message
      *           identification
      *     @type int $hw_version_major
      *           hardware version in format
-     *           v[major].[minor]
-     *           e.g., v1.0
+     *           [major].[minor]
+     *           e.g., 1.0
      *     @type int $hw_version_minor
      *           hardware version, minor
      *     @type int $fw_version_major
      *           firmware version in format 
-     *           v[major].[minor].[patch]-[variant]
-     *           e.g., v2.1.0-beta
+     *           [major].[minor].[patch]-[variant]
+     *           e.g., 2.1.0-beta
      *     @type int $fw_version_minor
      *           firmware version, minor
      *     @type int $fw_version_patch
@@ -122,23 +122,33 @@ class SysInfo extends \Google\Protobuf\Internal\Message
 
     /**
      * hardware version in format
-     * v[major].[minor]
-     * e.g., v1.0
+     * [major].[minor]
+     * e.g., 1.0
      *
-     * Generated from protobuf field <code>uint32 hw_version_major = 2;</code>
+     * Generated from protobuf field <code>optional uint32 hw_version_major = 2;</code>
      * @return int
      */
     public function getHwVersionMajor()
     {
-        return $this->hw_version_major;
+        return isset($this->hw_version_major) ? $this->hw_version_major : 0;
+    }
+
+    public function hasHwVersionMajor()
+    {
+        return isset($this->hw_version_major);
+    }
+
+    public function clearHwVersionMajor()
+    {
+        unset($this->hw_version_major);
     }
 
     /**
      * hardware version in format
-     * v[major].[minor]
-     * e.g., v1.0
+     * [major].[minor]
+     * e.g., 1.0
      *
-     * Generated from protobuf field <code>uint32 hw_version_major = 2;</code>
+     * Generated from protobuf field <code>optional uint32 hw_version_major = 2;</code>
      * @param int $var
      * @return $this
      */
@@ -153,18 +163,28 @@ class SysInfo extends \Google\Protobuf\Internal\Message
     /**
      * hardware version, minor
      *
-     * Generated from protobuf field <code>uint32 hw_version_minor = 3;</code>
+     * Generated from protobuf field <code>optional uint32 hw_version_minor = 3;</code>
      * @return int
      */
     public function getHwVersionMinor()
     {
-        return $this->hw_version_minor;
+        return isset($this->hw_version_minor) ? $this->hw_version_minor : 0;
+    }
+
+    public function hasHwVersionMinor()
+    {
+        return isset($this->hw_version_minor);
+    }
+
+    public function clearHwVersionMinor()
+    {
+        unset($this->hw_version_minor);
     }
 
     /**
      * hardware version, minor
      *
-     * Generated from protobuf field <code>uint32 hw_version_minor = 3;</code>
+     * Generated from protobuf field <code>optional uint32 hw_version_minor = 3;</code>
      * @param int $var
      * @return $this
      */
@@ -178,8 +198,8 @@ class SysInfo extends \Google\Protobuf\Internal\Message
 
     /**
      * firmware version in format 
-     * v[major].[minor].[patch]-[variant]
-     * e.g., v2.1.0-beta
+     * [major].[minor].[patch]-[variant]
+     * e.g., 2.1.0-beta
      *
      * Generated from protobuf field <code>uint32 fw_version_major = 4;</code>
      * @return int
@@ -191,8 +211,8 @@ class SysInfo extends \Google\Protobuf\Internal\Message
 
     /**
      * firmware version in format 
-     * v[major].[minor].[patch]-[variant]
-     * e.g., v2.1.0-beta
+     * [major].[minor].[patch]-[variant]
+     * e.g., 2.1.0-beta
      *
      * Generated from protobuf field <code>uint32 fw_version_major = 4;</code>
      * @param int $var

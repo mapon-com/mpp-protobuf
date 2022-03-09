@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * session start message: issued by MPP source nodes after opening a comms channel
+ * session start message; issued by MPP source nodes after opening a comms channel
  *
  * Generated from protobuf message <code>mpp.SessionBegin</code>
  */

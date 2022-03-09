@@ -144,13 +144,65 @@ class MsgType
      */
     const SYS_INFO = 22;
     /**
-     * Generated from protobuf enum <code>CONFIG_READ = 23;</code>
+     * payload = ConfigReadRequest
+     *
+     * Generated from protobuf enum <code>CONFIG_READ_REQUEST = 23;</code>
      */
-    const CONFIG_READ = 23;
+    const CONFIG_READ_REQUEST = 23;
     /**
-     * Generated from protobuf enum <code>CONFIG_READ_RESULT = 24;</code>
+     * payload = ConfigRead
+     *
+     * Generated from protobuf enum <code>CONFIG_READ = 24;</code>
      */
-    const CONFIG_READ_RESULT = 24;
+    const CONFIG_READ = 24;
+    /**
+     * payload = ConfigWrite
+     *
+     * Generated from protobuf enum <code>CONFIG_WRITE = 25;</code>
+     */
+    const CONFIG_WRITE = 25;
+    /**
+     * payload = ConfigResult
+     *
+     * Generated from protobuf enum <code>CONFIG_WRITE_RESULT = 26;</code>
+     */
+    const CONFIG_WRITE_RESULT = 26;
+    /**
+     * payload = ConfigSave
+     *
+     * Generated from protobuf enum <code>CONFIG_SAVE = 27;</code>
+     */
+    const CONFIG_SAVE = 27;
+    /**
+     * payload = ConfigResult
+     *
+     * Generated from protobuf enum <code>CONFIG_SAVE_RESULT = 28;</code>
+     */
+    const CONFIG_SAVE_RESULT = 28;
+    /**
+     * payload = ConfigRevert
+     *
+     * Generated from protobuf enum <code>CONFIG_REVERT = 29;</code>
+     */
+    const CONFIG_REVERT = 29;
+    /**
+     * payload = ConfigResult
+     *
+     * Generated from protobuf enum <code>CONFIG_REVERT_RESULT = 30;</code>
+     */
+    const CONFIG_REVERT_RESULT = 30;
+    /**
+     * payload = ConfigErase
+     *
+     * Generated from protobuf enum <code>CONFIG_ERASE = 31;</code>
+     */
+    const CONFIG_ERASE = 31;
+    /**
+     * payload = ConfigResult
+     *
+     * Generated from protobuf enum <code>CONFIG_ERASE_RESULT = 32;</code>
+     */
+    const CONFIG_ERASE_RESULT = 32;
 
     private static $valueToName = [
         self::NONE => 'NONE',
@@ -176,8 +228,16 @@ class MsgType
         self::CALIBRATE_IMU => 'CALIBRATE_IMU',
         self::SYS_INFO_REQUEST => 'SYS_INFO_REQUEST',
         self::SYS_INFO => 'SYS_INFO',
+        self::CONFIG_READ_REQUEST => 'CONFIG_READ_REQUEST',
         self::CONFIG_READ => 'CONFIG_READ',
-        self::CONFIG_READ_RESULT => 'CONFIG_READ_RESULT',
+        self::CONFIG_WRITE => 'CONFIG_WRITE',
+        self::CONFIG_WRITE_RESULT => 'CONFIG_WRITE_RESULT',
+        self::CONFIG_SAVE => 'CONFIG_SAVE',
+        self::CONFIG_SAVE_RESULT => 'CONFIG_SAVE_RESULT',
+        self::CONFIG_REVERT => 'CONFIG_REVERT',
+        self::CONFIG_REVERT_RESULT => 'CONFIG_REVERT_RESULT',
+        self::CONFIG_ERASE => 'CONFIG_ERASE',
+        self::CONFIG_ERASE_RESULT => 'CONFIG_ERASE_RESULT',
     ];
 
     public static function name($value)
