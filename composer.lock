@@ -4,27 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f0d313f9406793a66f9e81ba8ff0071",
+    "content-hash": "fde0542dfc75270131aa8da5785cb17b",
     "packages": [
         {
             "name": "google/protobuf",
-            "version": "v3.17.0",
+            "version": "v4.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "a3aa9415fb6f331322728793f345c1eafc320970"
+                "reference": "1b9bfead0ea8108e6ab411258fc38417b62d4bf6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/a3aa9415fb6f331322728793f345c1eafc320970",
-                "reference": "a3aa9415fb6f331322728793f345c1eafc320970",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/1b9bfead0ea8108e6ab411258fc38417b62d4bf6",
+                "reference": "1b9bfead0ea8108e6ab411258fc38417b62d4bf6",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.0"
+                "php": ">=7.0.0"
             },
             "require-dev": {
-                "phpunit/phpunit": ">=4.8.0"
+                "phpunit/phpunit": ">=5.0.0"
             },
             "suggest": {
                 "ext-bcmath": "Need to support JSON deserialization"
@@ -45,7 +45,10 @@
             "keywords": [
                 "proto"
             ],
-            "time": "2021-05-13T02:14:44+00:00"
+            "support": {
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.27.2"
+            },
+            "time": "2024-06-25T19:14:44+00:00"
         }
     ],
     "packages-dev": [],
@@ -56,5 +59,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.6.0"
 }

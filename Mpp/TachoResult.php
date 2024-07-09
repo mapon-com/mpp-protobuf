@@ -11,23 +11,23 @@ use Google\Protobuf\Internal\GPBUtil;
 
 /**
  **
- *	Purpose:	Transfers the result of a firmware update command or the whole update session.
+ *	Purpose:	Transfers the result of a tachograph command or the whole remote data download session.
  *	Reply:		N/D
  *
- * Generated from protobuf message <code>mpp.UpdateResult</code>
+ * Generated from protobuf message <code>mpp.TachoResult</code>
  */
-class UpdateResult extends \Google\Protobuf\Internal\Message
+class TachoResult extends \Google\Protobuf\Internal\Message
 {
     /**
-     * update session ID
+     * download session ID
      *
      * Generated from protobuf field <code>uint32 session_id = 1;</code>
      */
     protected $session_id = 0;
     /**
-     * command or update session result
+     * command or download session result
      *
-     * Generated from protobuf field <code>.mpp.UpdateResult.ResultType result = 2;</code>
+     * Generated from protobuf field <code>.mpp.TachoResultType result = 2;</code>
      */
     protected $result = 0;
 
@@ -38,9 +38,9 @@ class UpdateResult extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $session_id
-     *           update session ID
+     *           download session ID
      *     @type int $result
-     *           command or update session result
+     *           command or download session result
      * }
      */
     public function __construct($data = NULL) {
@@ -49,7 +49,7 @@ class UpdateResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * update session ID
+     * download session ID
      *
      * Generated from protobuf field <code>uint32 session_id = 1;</code>
      * @return int
@@ -60,7 +60,7 @@ class UpdateResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * update session ID
+     * download session ID
      *
      * Generated from protobuf field <code>uint32 session_id = 1;</code>
      * @param int $var
@@ -75,9 +75,9 @@ class UpdateResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * command or update session result
+     * command or download session result
      *
-     * Generated from protobuf field <code>.mpp.UpdateResult.ResultType result = 2;</code>
+     * Generated from protobuf field <code>.mpp.TachoResultType result = 2;</code>
      * @return int
      */
     public function getResult()
@@ -86,15 +86,15 @@ class UpdateResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * command or update session result
+     * command or download session result
      *
-     * Generated from protobuf field <code>.mpp.UpdateResult.ResultType result = 2;</code>
+     * Generated from protobuf field <code>.mpp.TachoResultType result = 2;</code>
      * @param int $var
      * @return $this
      */
     public function setResult($var)
     {
-        GPBUtil::checkEnum($var, \Mpp\UpdateResult\ResultType::class);
+        GPBUtil::checkEnum($var, \Mpp\TachoResultType::class);
         $this->result = $var;
 
         return $this;

@@ -10,11 +10,13 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * TODO
+ **
+ *	Purpose:	Initiates a test of tachograph connection and the Vehicle Unit (VU).
+ *	Reply:		TachoTest
  *
- * Generated from protobuf message <code>mpp.LogReadCancel</code>
+ * Generated from protobuf message <code>mpp.TachoTestRequest</code>
  */
-class LogReadCancel extends \Google\Protobuf\Internal\Message
+class TachoTestRequest extends \Google\Protobuf\Internal\Message
 {
 
     /**

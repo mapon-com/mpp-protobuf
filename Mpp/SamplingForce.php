@@ -11,19 +11,14 @@ use Google\Protobuf\Internal\GPBUtil;
 
 /**
  **
- *	Purpose:	Transfers a set of samples (measurements of symbol values acquired at a particular point in time).
+ *	Purpose:	Forces immediate acquisition of a specific sample; expects it to be received later as a Sample message.
+ *				Does nothing if sampling with the given tag has not been started.
  *	Reply:		N/D
  *
- * Generated from protobuf message <code>mpp.Samples</code>
+ * Generated from protobuf message <code>mpp.SamplingForce</code>
  */
-class Samples extends \Google\Protobuf\Internal\Message
+class SamplingForce extends \Google\Protobuf\Internal\Message
 {
-    /**
-     * blocks of samples
-     *
-     * Generated from protobuf field <code>repeated .mpp.Samples.Block blocks = 2;</code>
-     */
-    private $blocks;
     protected $tag;
 
     /**
@@ -36,8 +31,6 @@ class Samples extends \Google\Protobuf\Internal\Message
      *           sample tag hash
      *     @type string $tag_str
      *           sample tag string
-     *     @type array<\Mpp\Samples\Block>|\Google\Protobuf\Internal\RepeatedField $blocks
-     *           blocks of samples
      * }
      */
     public function __construct($data = NULL) {
@@ -79,56 +72,30 @@ class Samples extends \Google\Protobuf\Internal\Message
     /**
      * sample tag string
      *
-     * Generated from protobuf field <code>string tag_str = 3;</code>
+     * Generated from protobuf field <code>string tag_str = 2;</code>
      * @return string
      */
     public function getTagStr()
     {
-        return $this->readOneof(3);
+        return $this->readOneof(2);
     }
 
     public function hasTagStr()
     {
-        return $this->hasOneof(3);
+        return $this->hasOneof(2);
     }
 
     /**
      * sample tag string
      *
-     * Generated from protobuf field <code>string tag_str = 3;</code>
+     * Generated from protobuf field <code>string tag_str = 2;</code>
      * @param string $var
      * @return $this
      */
     public function setTagStr($var)
     {
         GPBUtil::checkString($var, True);
-        $this->writeOneof(3, $var);
-
-        return $this;
-    }
-
-    /**
-     * blocks of samples
-     *
-     * Generated from protobuf field <code>repeated .mpp.Samples.Block blocks = 2;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
-     */
-    public function getBlocks()
-    {
-        return $this->blocks;
-    }
-
-    /**
-     * blocks of samples
-     *
-     * Generated from protobuf field <code>repeated .mpp.Samples.Block blocks = 2;</code>
-     * @param array<\Mpp\Samples\Block>|\Google\Protobuf\Internal\RepeatedField $var
-     * @return $this
-     */
-    public function setBlocks($var)
-    {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Mpp\Samples\Block::class);
-        $this->blocks = $arr;
+        $this->writeOneof(2, $var);
 
         return $this;
     }

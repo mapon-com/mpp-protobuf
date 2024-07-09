@@ -10,11 +10,13 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * TODO
+ **
+ *	Purpose:	Requests information about tachograph company cards currently connected to the device.
+ *	Reply:		TachoCardInfo
  *
- * Generated from protobuf message <code>mpp.LogReadCancel</code>
+ * Generated from protobuf message <code>mpp.TachoCardInfoRequest</code>
  */
-class LogReadCancel extends \Google\Protobuf\Internal\Message
+class TachoCardInfoRequest extends \Google\Protobuf\Internal\Message
 {
 
     /**

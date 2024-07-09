@@ -10,11 +10,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * TODO
- *
- * Generated from protobuf message <code>mpp.LogReadCancel</code>
+ * Generated from protobuf message <code>mpp.InstallOrientRequest</code>
  */
-class LogReadCancel extends \Google\Protobuf\Internal\Message
+class InstallOrientRequest extends \Google\Protobuf\Internal\Message
 {
 
     /**

@@ -10,16 +10,18 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- **
- *
- * Generated from protobuf message <code>mpp.CalibrateIMU</code>
+ * Generated from protobuf message <code>mpp.PingingStart</code>
  */
-class CalibrateIMU extends \Google\Protobuf\Internal\Message
+class PingingStart extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>uint64 period = 1;</code>
      */
     protected $period = 0;
+    /**
+     * Generated from protobuf field <code>uint64 duration = 2;</code>
+     */
+    protected $duration = 0;
 
     /**
      * Constructor.
@@ -28,6 +30,7 @@ class CalibrateIMU extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $period
+     *     @type int|string $duration
      * }
      */
     public function __construct($data = NULL) {
@@ -53,6 +56,28 @@ class CalibrateIMU extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint64($var);
         $this->period = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint64 duration = 2;</code>
+     * @return int|string
+     */
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint64 duration = 2;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setDuration($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->duration = $var;
 
         return $this;
     }

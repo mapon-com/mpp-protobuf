@@ -11,16 +11,16 @@ use Google\Protobuf\Internal\GPBUtil;
 
 /**
  **
- *	Purpose:	Cancels a device firmware update session with the given session ID. If session ID is not provided, any 
- *				running update session is cancelled.
- *	Reply:		UpdateResult
+ *	Purpose:	Cancels the remote data download session with the given session ID. If session ID is not provided, any 
+ *				running download session is cancelled.
+ *	Reply:		TachoResult
  *
- * Generated from protobuf message <code>mpp.UpdateCancel</code>
+ * Generated from protobuf message <code>mpp.TachoDownloadCancel</code>
  */
-class UpdateCancel extends \Google\Protobuf\Internal\Message
+class TachoDownloadCancel extends \Google\Protobuf\Internal\Message
 {
     /**
-     * update session ID (cancels any session if not set)
+     * download session ID (cancels any session if not set)
      *
      * Generated from protobuf field <code>optional uint32 session_id = 1;</code>
      */
@@ -33,7 +33,7 @@ class UpdateCancel extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $session_id
-     *           update session ID (cancels any session if not set)
+     *           download session ID (cancels any session if not set)
      * }
      */
     public function __construct($data = NULL) {
@@ -42,7 +42,7 @@ class UpdateCancel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * update session ID (cancels any session if not set)
+     * download session ID (cancels any session if not set)
      *
      * Generated from protobuf field <code>optional uint32 session_id = 1;</code>
      * @return int
@@ -63,7 +63,7 @@ class UpdateCancel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * update session ID (cancels any session if not set)
+     * download session ID (cancels any session if not set)
      *
      * Generated from protobuf field <code>optional uint32 session_id = 1;</code>
      * @param int $var

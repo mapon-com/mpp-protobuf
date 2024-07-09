@@ -11,25 +11,25 @@ use Google\Protobuf\Internal\GPBUtil;
 
 /**
  **
- *	Purpose:	Transfers the result of a firmware update command or the whole update session.
+ *	Purpose:	Transfers authentication data between the company card and VU.
  *	Reply:		N/D
  *
- * Generated from protobuf message <code>mpp.UpdateResult</code>
+ * Generated from protobuf message <code>mpp.TachoAPDU</code>
  */
-class UpdateResult extends \Google\Protobuf\Internal\Message
+class TachoAPDU extends \Google\Protobuf\Internal\Message
 {
     /**
-     * update session ID
+     * download session ID
      *
      * Generated from protobuf field <code>uint32 session_id = 1;</code>
      */
     protected $session_id = 0;
     /**
-     * command or update session result
+     * APDU
      *
-     * Generated from protobuf field <code>.mpp.UpdateResult.ResultType result = 2;</code>
+     * Generated from protobuf field <code>optional bytes apdu = 2;</code>
      */
-    protected $result = 0;
+    protected $apdu = null;
 
     /**
      * Constructor.
@@ -38,9 +38,9 @@ class UpdateResult extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $session_id
-     *           update session ID
-     *     @type int $result
-     *           command or update session result
+     *           download session ID
+     *     @type string $apdu
+     *           APDU
      * }
      */
     public function __construct($data = NULL) {
@@ -49,7 +49,7 @@ class UpdateResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * update session ID
+     * download session ID
      *
      * Generated from protobuf field <code>uint32 session_id = 1;</code>
      * @return int
@@ -60,7 +60,7 @@ class UpdateResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * update session ID
+     * download session ID
      *
      * Generated from protobuf field <code>uint32 session_id = 1;</code>
      * @param int $var
@@ -75,27 +75,37 @@ class UpdateResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * command or update session result
+     * APDU
      *
-     * Generated from protobuf field <code>.mpp.UpdateResult.ResultType result = 2;</code>
-     * @return int
+     * Generated from protobuf field <code>optional bytes apdu = 2;</code>
+     * @return string
      */
-    public function getResult()
+    public function getApdu()
     {
-        return $this->result;
+        return isset($this->apdu) ? $this->apdu : '';
+    }
+
+    public function hasApdu()
+    {
+        return isset($this->apdu);
+    }
+
+    public function clearApdu()
+    {
+        unset($this->apdu);
     }
 
     /**
-     * command or update session result
+     * APDU
      *
-     * Generated from protobuf field <code>.mpp.UpdateResult.ResultType result = 2;</code>
-     * @param int $var
+     * Generated from protobuf field <code>optional bytes apdu = 2;</code>
+     * @param string $var
      * @return $this
      */
-    public function setResult($var)
+    public function setApdu($var)
     {
-        GPBUtil::checkEnum($var, \Mpp\UpdateResult\ResultType::class);
-        $this->result = $var;
+        GPBUtil::checkString($var, False);
+        $this->apdu = $var;
 
         return $this;
     }
