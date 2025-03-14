@@ -10,15 +10,24 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ **
+ *	Purpose:	Activates the "pinging" function: transmission of essential information about the device periodically 
+ *in short intervals.
+ *	Reply:		N/D
+ *
  * Generated from protobuf message <code>mpp.PingingStart</code>
  */
 class PingingStart extends \Google\Protobuf\Internal\Message
 {
     /**
+     * transmission period, ms
+     *
      * Generated from protobuf field <code>uint64 period = 1;</code>
      */
     protected $period = 0;
     /**
+     * duration of pinging, ms
+     *
      * Generated from protobuf field <code>uint64 duration = 2;</code>
      */
     protected $duration = 0;
@@ -30,7 +39,9 @@ class PingingStart extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $period
+     *           transmission period, ms
      *     @type int|string $duration
+     *           duration of pinging, ms
      * }
      */
     public function __construct($data = NULL) {
@@ -39,6 +50,8 @@ class PingingStart extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * transmission period, ms
+     *
      * Generated from protobuf field <code>uint64 period = 1;</code>
      * @return int|string
      */
@@ -48,6 +61,8 @@ class PingingStart extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * transmission period, ms
+     *
      * Generated from protobuf field <code>uint64 period = 1;</code>
      * @param int|string $var
      * @return $this
@@ -61,6 +76,8 @@ class PingingStart extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * duration of pinging, ms
+     *
      * Generated from protobuf field <code>uint64 duration = 2;</code>
      * @return int|string
      */
@@ -70,6 +87,8 @@ class PingingStart extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * duration of pinging, ms
+     *
      * Generated from protobuf field <code>uint64 duration = 2;</code>
      * @param int|string $var
      * @return $this

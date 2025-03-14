@@ -31,7 +31,7 @@ class ConfigRead extends \Google\Protobuf\Internal\Message
      */
     protected $user_config = null;
     /**
-     * IDs of locked symbols
+     * IDs of locked symbols (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 locked_symbol_ids = 3;</code>
      */
@@ -48,7 +48,7 @@ class ConfigRead extends \Google\Protobuf\Internal\Message
      *     @type \Mpp\ConfigRead\Layer $user_config
      *           user configuration; overwrites the defaults
      *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $locked_symbol_ids
-     *           IDs of locked symbols
+     *           IDs of locked symbols (in ascending order)
      * }
      */
     public function __construct($data = NULL) {
@@ -129,7 +129,7 @@ class ConfigRead extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * IDs of locked symbols
+     * IDs of locked symbols (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 locked_symbol_ids = 3;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -140,7 +140,7 @@ class ConfigRead extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * IDs of locked symbols
+     * IDs of locked symbols (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 locked_symbol_ids = 3;</code>
      * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var

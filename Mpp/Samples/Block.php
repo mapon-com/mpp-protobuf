@@ -17,7 +17,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class Block extends \Google\Protobuf\Internal\Message
 {
     /**
-     * symbol IDs
+     * symbol IDs (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 symbol_ids = 1;</code>
      */
@@ -36,7 +36,7 @@ class Block extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $symbol_ids
-     *           symbol IDs
+     *           symbol IDs (in ascending order)
      *     @type array<\Mpp\Samples\Sample>|\Google\Protobuf\Internal\RepeatedField $samples
      *           samples
      * }
@@ -47,7 +47,7 @@ class Block extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * symbol IDs
+     * symbol IDs (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 symbol_ids = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -58,7 +58,7 @@ class Block extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * symbol IDs
+     * symbol IDs (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 symbol_ids = 1;</code>
      * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var

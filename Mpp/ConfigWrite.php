@@ -27,13 +27,13 @@ class ConfigWrite extends \Google\Protobuf\Internal\Message
      */
     protected $user_config = null;
     /**
-     * IDs of symbols to be locked	
+     * IDs of symbols to be locked (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 lock_symbol_ids = 2;</code>
      */
     private $lock_symbol_ids;
     /**
-     * IDs of symbols to be unlocked
+     * IDs of symbols to be unlocked (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 unlock_symbol_ids = 3;</code>
      */
@@ -48,9 +48,9 @@ class ConfigWrite extends \Google\Protobuf\Internal\Message
      *     @type \Mpp\ConfigWrite\Layer $user_config
      *           user configuration (changes only)
      *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $lock_symbol_ids
-     *           IDs of symbols to be locked	
+     *           IDs of symbols to be locked (in ascending order)
      *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $unlock_symbol_ids
-     *           IDs of symbols to be unlocked
+     *           IDs of symbols to be unlocked (in ascending order)
      * }
      */
     public function __construct($data = NULL) {
@@ -95,7 +95,7 @@ class ConfigWrite extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * IDs of symbols to be locked	
+     * IDs of symbols to be locked (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 lock_symbol_ids = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -106,7 +106,7 @@ class ConfigWrite extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * IDs of symbols to be locked	
+     * IDs of symbols to be locked (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 lock_symbol_ids = 2;</code>
      * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
@@ -121,7 +121,7 @@ class ConfigWrite extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * IDs of symbols to be unlocked
+     * IDs of symbols to be unlocked (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 unlock_symbol_ids = 3;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -132,7 +132,7 @@ class ConfigWrite extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * IDs of symbols to be unlocked
+     * IDs of symbols to be unlocked (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 unlock_symbol_ids = 3;</code>
      * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var

@@ -17,7 +17,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class Layer extends \Google\Protobuf\Internal\Message
 {
     /**
-     * IDs of the changed symbolds	
+     * IDs of the changed symbols (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 set_symbol_ids = 1;</code>
      */
@@ -29,7 +29,7 @@ class Layer extends \Google\Protobuf\Internal\Message
      */
     protected $set_symbol_values = '';
     /**
-     * IDs of the cleared symbols
+     * IDs of the cleared symbols (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 clear_symbol_ids = 3;</code>
      */
@@ -42,11 +42,11 @@ class Layer extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $set_symbol_ids
-     *           IDs of the changed symbolds	
+     *           IDs of the changed symbols (in ascending order)
      *     @type string $set_symbol_values
      *           values of the changed symbols as a continuous buffer
      *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $clear_symbol_ids
-     *           IDs of the cleared symbols
+     *           IDs of the cleared symbols (in ascending order)
      * }
      */
     public function __construct($data = NULL) {
@@ -55,7 +55,7 @@ class Layer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * IDs of the changed symbolds	
+     * IDs of the changed symbols (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 set_symbol_ids = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -66,7 +66,7 @@ class Layer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * IDs of the changed symbolds	
+     * IDs of the changed symbols (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 set_symbol_ids = 1;</code>
      * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
@@ -107,7 +107,7 @@ class Layer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * IDs of the cleared symbols
+     * IDs of the cleared symbols (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 clear_symbol_ids = 3;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -118,7 +118,7 @@ class Layer extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * IDs of the cleared symbols
+     * IDs of the cleared symbols (in ascending order)
      *
      * Generated from protobuf field <code>repeated uint32 clear_symbol_ids = 3;</code>
      * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var

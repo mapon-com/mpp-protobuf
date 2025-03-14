@@ -14,7 +14,6 @@ use Google\Protobuf\Internal\GPBUtil;
  *	Purpose:	Starts sampling a set of symbols. The acquired samples are stored temporarily by the executing party 
  *				in a buffer with given capacity. The buffered samples are tagged for identification, packed in groups 
  *				with given size and transmitted as Samples messages.
- *If the sampling period is not provided, samples are acquired upon change of any symbol value.
  *				If partial samples are allowed, they may contain any number of symbols from the set; otherwise, samples 
  *				are acquired if and only if all symbols are valid and thus always contain the whole set.
  *				If sampling with the given tag has already been started, it will be restarted with the new parameters.
@@ -25,17 +24,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class SamplingStart extends \Google\Protobuf\Internal\Message
 {
     /**
+     * sampling mode
+     *
+     * Generated from protobuf field <code>.mpp.SamplingStart.SamplingMode sampling_mode = 3;</code>
+     */
+    protected $sampling_mode = 0;
+    /**
      * symbol IDs
      *
-     * Generated from protobuf field <code>repeated uint32 symbol_ids = 3;</code>
+     * Generated from protobuf field <code>repeated uint32 symbol_ids = 4;</code>
      */
     private $symbol_ids;
-    /**
-     * sampling period, ms
-     *
-     * Generated from protobuf field <code>optional uint64 sampling_period = 4;</code>
-     */
-    protected $sampling_period = null;
     /**
      * allow partial samples
      *
@@ -54,6 +53,18 @@ class SamplingStart extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 sample_pack_size = 7;</code>
      */
     protected $sample_pack_size = 0;
+    /**
+     * sampling period, ms (periodic sampling only)
+     *
+     * Generated from protobuf field <code>optional uint64 sampling_period = 8;</code>
+     */
+    protected $sampling_period = null;
+    /**
+     * simplication level (adaptive sampling only)
+     *
+     * Generated from protobuf field <code>optional uint32 simplify_level = 9;</code>
+     */
+    protected $simplify_level = null;
     protected $tag;
 
     /**
@@ -66,16 +77,20 @@ class SamplingStart extends \Google\Protobuf\Internal\Message
      *           sample tag hash
      *     @type string $tag_str
      *           sample tag string
+     *     @type int $sampling_mode
+     *           sampling mode
      *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $symbol_ids
      *           symbol IDs
-     *     @type int|string $sampling_period
-     *           sampling period, ms
      *     @type bool $allow_partial_samples
      *           allow partial samples
      *     @type int $sample_buf_size
      *           number of buffered samples
      *     @type int $sample_pack_size
      *           number of samples in pack
+     *     @type int|string $sampling_period
+     *           sampling period, ms (periodic sampling only)
+     *     @type int $simplify_level
+     *           simplication level (adaptive sampling only)
      * }
      */
     public function __construct($data = NULL) {
@@ -146,9 +161,35 @@ class SamplingStart extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * sampling mode
+     *
+     * Generated from protobuf field <code>.mpp.SamplingStart.SamplingMode sampling_mode = 3;</code>
+     * @return int
+     */
+    public function getSamplingMode()
+    {
+        return $this->sampling_mode;
+    }
+
+    /**
+     * sampling mode
+     *
+     * Generated from protobuf field <code>.mpp.SamplingStart.SamplingMode sampling_mode = 3;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setSamplingMode($var)
+    {
+        GPBUtil::checkEnum($var, \Mpp\SamplingStart\SamplingMode::class);
+        $this->sampling_mode = $var;
+
+        return $this;
+    }
+
+    /**
      * symbol IDs
      *
-     * Generated from protobuf field <code>repeated uint32 symbol_ids = 3;</code>
+     * Generated from protobuf field <code>repeated uint32 symbol_ids = 4;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getSymbolIds()
@@ -159,7 +200,7 @@ class SamplingStart extends \Google\Protobuf\Internal\Message
     /**
      * symbol IDs
      *
-     * Generated from protobuf field <code>repeated uint32 symbol_ids = 3;</code>
+     * Generated from protobuf field <code>repeated uint32 symbol_ids = 4;</code>
      * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -167,42 +208,6 @@ class SamplingStart extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::UINT32);
         $this->symbol_ids = $arr;
-
-        return $this;
-    }
-
-    /**
-     * sampling period, ms
-     *
-     * Generated from protobuf field <code>optional uint64 sampling_period = 4;</code>
-     * @return int|string
-     */
-    public function getSamplingPeriod()
-    {
-        return isset($this->sampling_period) ? $this->sampling_period : 0;
-    }
-
-    public function hasSamplingPeriod()
-    {
-        return isset($this->sampling_period);
-    }
-
-    public function clearSamplingPeriod()
-    {
-        unset($this->sampling_period);
-    }
-
-    /**
-     * sampling period, ms
-     *
-     * Generated from protobuf field <code>optional uint64 sampling_period = 4;</code>
-     * @param int|string $var
-     * @return $this
-     */
-    public function setSamplingPeriod($var)
-    {
-        GPBUtil::checkUint64($var);
-        $this->sampling_period = $var;
 
         return $this;
     }
@@ -281,6 +286,78 @@ class SamplingStart extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->sample_pack_size = $var;
+
+        return $this;
+    }
+
+    /**
+     * sampling period, ms (periodic sampling only)
+     *
+     * Generated from protobuf field <code>optional uint64 sampling_period = 8;</code>
+     * @return int|string
+     */
+    public function getSamplingPeriod()
+    {
+        return isset($this->sampling_period) ? $this->sampling_period : 0;
+    }
+
+    public function hasSamplingPeriod()
+    {
+        return isset($this->sampling_period);
+    }
+
+    public function clearSamplingPeriod()
+    {
+        unset($this->sampling_period);
+    }
+
+    /**
+     * sampling period, ms (periodic sampling only)
+     *
+     * Generated from protobuf field <code>optional uint64 sampling_period = 8;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setSamplingPeriod($var)
+    {
+        GPBUtil::checkUint64($var);
+        $this->sampling_period = $var;
+
+        return $this;
+    }
+
+    /**
+     * simplication level (adaptive sampling only)
+     *
+     * Generated from protobuf field <code>optional uint32 simplify_level = 9;</code>
+     * @return int
+     */
+    public function getSimplifyLevel()
+    {
+        return isset($this->simplify_level) ? $this->simplify_level : 0;
+    }
+
+    public function hasSimplifyLevel()
+    {
+        return isset($this->simplify_level);
+    }
+
+    public function clearSimplifyLevel()
+    {
+        unset($this->simplify_level);
+    }
+
+    /**
+     * simplication level (adaptive sampling only)
+     *
+     * Generated from protobuf field <code>optional uint32 simplify_level = 9;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setSimplifyLevel($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->simplify_level = $var;
 
         return $this;
     }

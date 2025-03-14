@@ -291,15 +291,15 @@ class MsgType
      */
     const TACHO_CARD_INFO = 39;
     /**
-     * Generated from protobuf enum <code>CALIBRATE_IMU = 20;</code>
-     */
-    const CALIBRATE_IMU = 20;
-    /**
      * payload = PingingStart
      *
      * Generated from protobuf enum <code>PINGING_START = 19;</code>
      */
     const PINGING_START = 19;
+    /**
+     * Generated from protobuf enum <code>CALIBRATE_IMU = 20;</code>
+     */
+    const CALIBRATE_IMU = 20;
     /**
      * Generated from protobuf enum <code>INSTALL_ORIENT_MARK = 33;</code>
      */
@@ -364,8 +364,8 @@ class MsgType
         self::TACHO_TEST => 'TACHO_TEST',
         self::TACHO_CARD_INFO_REQUEST => 'TACHO_CARD_INFO_REQUEST',
         self::TACHO_CARD_INFO => 'TACHO_CARD_INFO',
-        self::CALIBRATE_IMU => 'CALIBRATE_IMU',
         self::PINGING_START => 'PINGING_START',
+        self::CALIBRATE_IMU => 'CALIBRATE_IMU',
         self::INSTALL_ORIENT_MARK => 'INSTALL_ORIENT_MARK',
         self::INSTALL_ORIENT_REQUEST => 'INSTALL_ORIENT_REQUEST',
         self::INSTALL_ORIENT => 'INSTALL_ORIENT',
