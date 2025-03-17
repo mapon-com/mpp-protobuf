@@ -61,10 +61,14 @@ class Msg extends \Google\Protobuf\Internal\Message
      *     @type \Mpp\TachoFilePart $tacho_file_part
      *     @type \Mpp\TachoFileManifest $tacho_file_manifest
      *     @type \Mpp\TachoAPDU $tacho_apdu
+     *     @type \Mpp\TachoAPDUResult $tacho_apdu_result
      *     @type \Mpp\TachoTestRequest $tacho_test_request
      *     @type \Mpp\TachoTest $tacho_test
      *     @type \Mpp\TachoCardInfoRequest $tacho_card_info_request
      *     @type \Mpp\TachoCardInfo $tacho_card_info
+     *     @type \Mpp\TachoCardSessionStart $tacho_card_session_start
+     *     @type \Mpp\TachoCardSessionCancel $tacho_card_session_cancel
+     *     @type \Mpp\TachoCardShowBlinkenlights $tacho_card_show_blinkenlights
      *     @type \Mpp\PingingStart $pinging_start
      *     @type \Mpp\CalibrateIMU $calibrate_imu
      *     @type \Mpp\InstallOrientMark $install_orient_mark
@@ -943,6 +947,33 @@ class Msg extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Generated from protobuf field <code>.mpp.TachoAPDUResult tacho_apdu_result = 44;</code>
+     * @return \Mpp\TachoAPDUResult|null
+     */
+    public function getTachoApduResult()
+    {
+        return $this->readOneof(44);
+    }
+
+    public function hasTachoApduResult()
+    {
+        return $this->hasOneof(44);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.TachoAPDUResult tacho_apdu_result = 44;</code>
+     * @param \Mpp\TachoAPDUResult $var
+     * @return $this
+     */
+    public function setTachoApduResult($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\TachoAPDUResult::class);
+        $this->writeOneof(44, $var);
+
+        return $this;
+    }
+
+    /**
      * Generated from protobuf field <code>.mpp.TachoTestRequest tacho_test_request = 41;</code>
      * @return \Mpp\TachoTestRequest|null
      */
@@ -1046,6 +1077,87 @@ class Msg extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Mpp\TachoCardInfo::class);
         $this->writeOneof(33, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.TachoCardSessionStart tacho_card_session_start = 45;</code>
+     * @return \Mpp\TachoCardSessionStart|null
+     */
+    public function getTachoCardSessionStart()
+    {
+        return $this->readOneof(45);
+    }
+
+    public function hasTachoCardSessionStart()
+    {
+        return $this->hasOneof(45);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.TachoCardSessionStart tacho_card_session_start = 45;</code>
+     * @param \Mpp\TachoCardSessionStart $var
+     * @return $this
+     */
+    public function setTachoCardSessionStart($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\TachoCardSessionStart::class);
+        $this->writeOneof(45, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.TachoCardSessionCancel tacho_card_session_cancel = 46;</code>
+     * @return \Mpp\TachoCardSessionCancel|null
+     */
+    public function getTachoCardSessionCancel()
+    {
+        return $this->readOneof(46);
+    }
+
+    public function hasTachoCardSessionCancel()
+    {
+        return $this->hasOneof(46);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.TachoCardSessionCancel tacho_card_session_cancel = 46;</code>
+     * @param \Mpp\TachoCardSessionCancel $var
+     * @return $this
+     */
+    public function setTachoCardSessionCancel($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\TachoCardSessionCancel::class);
+        $this->writeOneof(46, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.TachoCardShowBlinkenlights tacho_card_show_blinkenlights = 47;</code>
+     * @return \Mpp\TachoCardShowBlinkenlights|null
+     */
+    public function getTachoCardShowBlinkenlights()
+    {
+        return $this->readOneof(47);
+    }
+
+    public function hasTachoCardShowBlinkenlights()
+    {
+        return $this->hasOneof(47);
+    }
+
+    /**
+     * Generated from protobuf field <code>.mpp.TachoCardShowBlinkenlights tacho_card_show_blinkenlights = 47;</code>
+     * @param \Mpp\TachoCardShowBlinkenlights $var
+     * @return $this
+     */
+    public function setTachoCardShowBlinkenlights($var)
+    {
+        GPBUtil::checkMessage($var, \Mpp\TachoCardShowBlinkenlights::class);
+        $this->writeOneof(47, $var);
 
         return $this;
     }

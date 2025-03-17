@@ -11,13 +11,19 @@ use Google\Protobuf\Internal\GPBUtil;
 
 /**
  **
- *	Purpose:	Requests information about tachograph company cards currently connected to the device.
+ *	Purpose:	Requests information about all or a subset of tachograph company cards.
  *	Reply:		TachoCardInfo
  *
  * Generated from protobuf message <code>mpp.TachoCardInfoRequest</code>
  */
 class TachoCardInfoRequest extends \Google\Protobuf\Internal\Message
 {
+    /**
+     * smartcard serial numbers (optional)
+     *
+     * Generated from protobuf field <code>repeated uint64 card_serials = 1;</code>
+     */
+    private $card_serials;
 
     /**
      * Constructor.
@@ -25,11 +31,39 @@ class TachoCardInfoRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $card_serials
+     *           smartcard serial numbers (optional)
      * }
      */
     public function __construct($data = NULL) {
         \GPBMetadata\Mpp::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     * smartcard serial numbers (optional)
+     *
+     * Generated from protobuf field <code>repeated uint64 card_serials = 1;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getCardSerials()
+    {
+        return $this->card_serials;
+    }
+
+    /**
+     * smartcard serial numbers (optional)
+     *
+     * Generated from protobuf field <code>repeated uint64 card_serials = 1;</code>
+     * @param array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setCardSerials($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::UINT64);
+        $this->card_serials = $arr;
+
+        return $this;
     }
 
 }

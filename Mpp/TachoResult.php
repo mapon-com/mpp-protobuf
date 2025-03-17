@@ -19,7 +19,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class TachoResult extends \Google\Protobuf\Internal\Message
 {
     /**
-     * download session ID
+     * session ID
      *
      * Generated from protobuf field <code>uint32 session_id = 1;</code>
      */
@@ -38,7 +38,7 @@ class TachoResult extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $session_id
-     *           download session ID
+     *           session ID
      *     @type int $result
      *           command or download session result
      * }
@@ -49,7 +49,7 @@ class TachoResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * download session ID
+     * session ID
      *
      * Generated from protobuf field <code>uint32 session_id = 1;</code>
      * @return int
@@ -60,7 +60,7 @@ class TachoResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * download session ID
+     * session ID
      *
      * Generated from protobuf field <code>uint32 session_id = 1;</code>
      * @param int $var

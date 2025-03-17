@@ -11,12 +11,12 @@ use Google\Protobuf\Internal\GPBUtil;
 
 /**
  **
- *	Purpose:	Transfers authentication data between the company card and VU.
- *	Reply:		TachoAPDUResult
+ *	Purpose:	Transfers the result of a tachograph command which returns an APDU.
+ *	Reply:		N/D
  *
- * Generated from protobuf message <code>mpp.TachoAPDU</code>
+ * Generated from protobuf message <code>mpp.TachoAPDUResult</code>
  */
-class TachoAPDU extends \Google\Protobuf\Internal\Message
+class TachoAPDUResult extends \Google\Protobuf\Internal\Message
 {
     /**
      * session ID
@@ -25,9 +25,15 @@ class TachoAPDU extends \Google\Protobuf\Internal\Message
      */
     protected $session_id = 0;
     /**
-     * APDU
+     * command result
      *
-     * Generated from protobuf field <code>optional bytes apdu = 2;</code>
+     * Generated from protobuf field <code>.mpp.TachoResultType result = 2;</code>
+     */
+    protected $result = 0;
+    /**
+     * APDU or ATR
+     *
+     * Generated from protobuf field <code>optional bytes apdu = 3;</code>
      */
     protected $apdu = null;
 
@@ -39,8 +45,10 @@ class TachoAPDU extends \Google\Protobuf\Internal\Message
      *
      *     @type int $session_id
      *           session ID
+     *     @type int $result
+     *           command result
      *     @type string $apdu
-     *           APDU
+     *           APDU or ATR
      * }
      */
     public function __construct($data = NULL) {
@@ -75,9 +83,35 @@ class TachoAPDU extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * APDU
+     * command result
      *
-     * Generated from protobuf field <code>optional bytes apdu = 2;</code>
+     * Generated from protobuf field <code>.mpp.TachoResultType result = 2;</code>
+     * @return int
+     */
+    public function getResult()
+    {
+        return $this->result;
+    }
+
+    /**
+     * command result
+     *
+     * Generated from protobuf field <code>.mpp.TachoResultType result = 2;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setResult($var)
+    {
+        GPBUtil::checkEnum($var, \Mpp\TachoResultType::class);
+        $this->result = $var;
+
+        return $this;
+    }
+
+    /**
+     * APDU or ATR
+     *
+     * Generated from protobuf field <code>optional bytes apdu = 3;</code>
      * @return string
      */
     public function getApdu()
@@ -96,9 +130,9 @@ class TachoAPDU extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * APDU
+     * APDU or ATR
      *
-     * Generated from protobuf field <code>optional bytes apdu = 2;</code>
+     * Generated from protobuf field <code>optional bytes apdu = 3;</code>
      * @param string $var
      * @return $this
      */

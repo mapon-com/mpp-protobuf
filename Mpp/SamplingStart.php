@@ -62,7 +62,7 @@ class SamplingStart extends \Google\Protobuf\Internal\Message
     /**
      * simplication level (adaptive sampling only)
      *
-     * Generated from protobuf field <code>optional uint32 simplify_level = 9;</code>
+     * Generated from protobuf field <code>optional float simplify_level = 9;</code>
      */
     protected $simplify_level = null;
     protected $tag;
@@ -89,7 +89,7 @@ class SamplingStart extends \Google\Protobuf\Internal\Message
      *           number of samples in pack
      *     @type int|string $sampling_period
      *           sampling period, ms (periodic sampling only)
-     *     @type int $simplify_level
+     *     @type float $simplify_level
      *           simplication level (adaptive sampling only)
      * }
      */
@@ -329,12 +329,12 @@ class SamplingStart extends \Google\Protobuf\Internal\Message
     /**
      * simplication level (adaptive sampling only)
      *
-     * Generated from protobuf field <code>optional uint32 simplify_level = 9;</code>
-     * @return int
+     * Generated from protobuf field <code>optional float simplify_level = 9;</code>
+     * @return float
      */
     public function getSimplifyLevel()
     {
-        return isset($this->simplify_level) ? $this->simplify_level : 0;
+        return isset($this->simplify_level) ? $this->simplify_level : 0.0;
     }
 
     public function hasSimplifyLevel()
@@ -350,13 +350,13 @@ class SamplingStart extends \Google\Protobuf\Internal\Message
     /**
      * simplication level (adaptive sampling only)
      *
-     * Generated from protobuf field <code>optional uint32 simplify_level = 9;</code>
-     * @param int $var
+     * Generated from protobuf field <code>optional float simplify_level = 9;</code>
+     * @param float $var
      * @return $this
      */
     public function setSimplifyLevel($var)
     {
-        GPBUtil::checkUint32($var);
+        GPBUtil::checkFloat($var);
         $this->simplify_level = $var;
 
         return $this;

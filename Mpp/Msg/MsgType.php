@@ -267,6 +267,12 @@ class MsgType
      */
     const TACHO_APDU = 48;
     /**
+     * payload = TachoAPDUResult
+     *
+     * Generated from protobuf enum <code>TACHO_APDU_RESULT = 52;</code>
+     */
+    const TACHO_APDU_RESULT = 52;
+    /**
      * payload = TachoTestRequest
      *
      * Generated from protobuf enum <code>TACHO_TEST_REQUEST = 49;</code>
@@ -290,6 +296,42 @@ class MsgType
      * Generated from protobuf enum <code>TACHO_CARD_INFO = 39;</code>
      */
     const TACHO_CARD_INFO = 39;
+    /**
+     * payload = TachoCardSessionStart				
+     *
+     * Generated from protobuf enum <code>TACHO_CARD_SESSION_START = 53;</code>
+     */
+    const TACHO_CARD_SESSION_START = 53;
+    /**
+     * payload = TachoAPDUResult
+     *
+     * Generated from protobuf enum <code>TACHO_CARD_SESSION_START_RESULT = 54;</code>
+     */
+    const TACHO_CARD_SESSION_START_RESULT = 54;
+    /**
+     * payload = TachoCardSessionCancel
+     *
+     * Generated from protobuf enum <code>TACHO_CARD_SESSION_CANCEL = 55;</code>
+     */
+    const TACHO_CARD_SESSION_CANCEL = 55;
+    /**
+     * payload = TachoResult
+     *
+     * Generated from protobuf enum <code>TACHO_CARD_SESSION_CANCEL_RESULT = 56;</code>
+     */
+    const TACHO_CARD_SESSION_CANCEL_RESULT = 56;
+    /**
+     * payload = TachoCardShowBlinkenlights
+     *
+     * Generated from protobuf enum <code>TACHO_CARD_SHOW_BLINKENLIGHTS = 57;</code>
+     */
+    const TACHO_CARD_SHOW_BLINKENLIGHTS = 57;
+    /**
+     * payload = TachoResult
+     *
+     * Generated from protobuf enum <code>TACHO_CARD_SHOW_BLINKENLIGHTS_RESULT = 58;</code>
+     */
+    const TACHO_CARD_SHOW_BLINKENLIGHTS_RESULT = 58;
     /**
      * payload = PingingStart
      *
@@ -360,10 +402,17 @@ class MsgType
         self::TACHO_DOWNLOAD_FILE_MANIFEST => 'TACHO_DOWNLOAD_FILE_MANIFEST',
         self::TACHO_DOWNLOAD_SESSION_RESULT => 'TACHO_DOWNLOAD_SESSION_RESULT',
         self::TACHO_APDU => 'TACHO_APDU',
+        self::TACHO_APDU_RESULT => 'TACHO_APDU_RESULT',
         self::TACHO_TEST_REQUEST => 'TACHO_TEST_REQUEST',
         self::TACHO_TEST => 'TACHO_TEST',
         self::TACHO_CARD_INFO_REQUEST => 'TACHO_CARD_INFO_REQUEST',
         self::TACHO_CARD_INFO => 'TACHO_CARD_INFO',
+        self::TACHO_CARD_SESSION_START => 'TACHO_CARD_SESSION_START',
+        self::TACHO_CARD_SESSION_START_RESULT => 'TACHO_CARD_SESSION_START_RESULT',
+        self::TACHO_CARD_SESSION_CANCEL => 'TACHO_CARD_SESSION_CANCEL',
+        self::TACHO_CARD_SESSION_CANCEL_RESULT => 'TACHO_CARD_SESSION_CANCEL_RESULT',
+        self::TACHO_CARD_SHOW_BLINKENLIGHTS => 'TACHO_CARD_SHOW_BLINKENLIGHTS',
+        self::TACHO_CARD_SHOW_BLINKENLIGHTS_RESULT => 'TACHO_CARD_SHOW_BLINKENLIGHTS_RESULT',
         self::PINGING_START => 'PINGING_START',
         self::CALIBRATE_IMU => 'CALIBRATE_IMU',
         self::INSTALL_ORIENT_MARK => 'INSTALL_ORIENT_MARK',

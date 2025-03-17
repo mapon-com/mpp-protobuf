@@ -86,6 +86,12 @@ class TachoResultType
      * Generated from protobuf enum <code>NO_DATA = 11;</code>
      */
     const NO_DATA = 11;
+    /**
+     * not found
+     *
+     * Generated from protobuf enum <code>NOT_FOUND = 12;</code>
+     */
+    const NOT_FOUND = 12;
 
     private static $valueToName = [
         self::OK => 'OK',
@@ -100,6 +106,7 @@ class TachoResultType
         self::NO_CONNECTION => 'NO_CONNECTION',
         self::AUTH_FAILED => 'AUTH_FAILED',
         self::NO_DATA => 'NO_DATA',
+        self::NOT_FOUND => 'NOT_FOUND',
     ];
 
     public static function name($value)

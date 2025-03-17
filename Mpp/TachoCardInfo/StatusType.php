@@ -27,7 +27,7 @@ class StatusType
      */
     const CONNECTED = 1;
     /**
-     * busy (participating in a transaction)
+     * busy
      *
      * Generated from protobuf enum <code>BUSY = 2;</code>
      */

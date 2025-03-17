@@ -15,7 +15,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class Card extends \Google\Protobuf\Internal\Message
 {
     /**
-     * smartcard serial number
+     * card serial number
      *
      * Generated from protobuf field <code>uint64 card_serial = 1;</code>
      */
@@ -64,7 +64,7 @@ class Card extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $card_serial
-     *           smartcard serial number
+     *           card serial number
      *     @type int $generation
      *           company card generation
      *     @type int $status
@@ -85,7 +85,7 @@ class Card extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * smartcard serial number
+     * card serial number
      *
      * Generated from protobuf field <code>uint64 card_serial = 1;</code>
      * @return int|string
@@ -96,7 +96,7 @@ class Card extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * smartcard serial number
+     * card serial number
      *
      * Generated from protobuf field <code>uint64 card_serial = 1;</code>
      * @param int|string $var
